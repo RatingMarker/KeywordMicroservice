@@ -17,12 +17,17 @@ apply plugin: 'spring-boot'
 sourceCompatibility = 1.5
 targetCompatibility = 1.5
 
+hibernateVersion = '5.0.7.Final'
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    compile group: 'org.hibernate', name: 'hibernate-core'
+    compile group: 'mysql', name: 'mysql-connector-java'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
