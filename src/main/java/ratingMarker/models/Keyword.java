@@ -1,4 +1,4 @@
-package models;
+package ratingMarker.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,10 +16,12 @@ public class Keyword {
     @GeneratedValue
     private int id;
 
+
+
     private String name;
 
     @OneToMany(mappedBy = "keyword")
-    private Set<Word> words = new HashSet<Word>();
+    private Set<Subword> subwords = new HashSet<Subword>();
 
     public Keyword() {
         //jpa only
@@ -38,7 +40,11 @@ public class Keyword {
         return name;
     }
 
-    public Set<Word> getWords() {
-        return words;
+    public Set<Subword> getSubwords() {
+        return subwords;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
