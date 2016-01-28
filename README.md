@@ -4,5 +4,5 @@
 3. `gradle bootrun`
 4. Open `http://localhost:8080/keywords`
 
-# ConnectString
+### ConnectString
 See file `KeywordMicroservice/src/main/resources/application.properties`
